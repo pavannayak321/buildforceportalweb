@@ -1,184 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BuildForce — Home</title>
-  <style>
-    :root{
-      --accent:#0b84ff;
-      --muted:#6b7280;
-      --bg:#f8fafc;
-      --card:#ffffff;
-      --max-width:1000px;
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      margin:0; background:var(--bg); color:#111827; line-height:1.45;
-      display:flex; justify-content:center; padding:28px;
-    }
-    .wrap{width:100%; max-width:var(--max-width);}
-    header{
-      display:flex; align-items:center; gap:12px; margin-bottom:18px;
-    }
-    .logo {
-      width:48px; height:48px; border-radius:8px;
-      background:linear-gradient(135deg,var(--accent), #0bb39f);
-      display:flex; align-items:center; justify-content:center; color:white; font-weight:700;
-    }
-    h1{font-size:20px; margin:0}
-    .card{
-      background:var(--card); padding:18px; border-radius:10px; box-shadow:0 6px 18px rgba(8,15,30,0.06);
-    }
-
-    /* Tabs */
-    .tabs {
-      display:flex; gap:8px; border-bottom:1px solid #e6eef6; margin-bottom:14px;
-      padding-bottom:6px; align-items:center;
-    }
-    .tab {
-      appearance:none; border:0; background:transparent; padding:8px 12px; border-radius:8px;
-      cursor:pointer; font-weight:600; color:var(--muted); outline:none;
-    }
-    .tab[aria-selected="true"]{
-      color:var(--accent); box-shadow:inset 0 -2px 0 0 var(--accent); background:rgba(11,132,255,0.03);
-    }
-    .tab:focus{box-shadow:0 0 0 3px rgba(11,132,255,0.12);}
-
-    .content{
-      padding-top:8px;
-    }
-    .panel{ display:none; }
-    .panel[aria-hidden="false"]{ display:block; }
-
-    /* small layout */
-    @media (max-width:640px){
-      header{flex-direction:column; align-items:flex-start; gap:8px}
-      .tabs{overflow:auto}
-    }
-
-    /* small helper styles */
-    .muted{color:var(--muted); font-size:14px}
-    .btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
-    pre{background:#0f1724;color:#e6eef6;padding:12px;border-radius:6px;overflow:auto}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Home - BuildForce</title>
+<link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="logo">BF</div>
-      <div>
-        <h1>BuildForce Portal</h1>
-        <div class="muted">Static demo — tabs, accessible & responsive</div>
-      </div>
-    </header>
-
-    <main class="card" id="main">
-      <!-- Tabs list -->
-      <div role="tablist" aria-label="Main tabs" class="tabs" id="tabs">
-        <button role="tab" class="tab" id="tab-home" aria-controls="panel-home" aria-selected="true" tabindex="0">Home</button>
-        <button role="tab" class="tab" id="tab-features" aria-controls="panel-features" aria-selected="false" tabindex="-1">Features</button>
-        <button role="tab" class="tab" id="tab-pricing" aria-controls="panel-pricing" aria-selected="false" tabindex="-1">Pricing</button>
-        <button role="tab" class="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1">Contact</button>
-
-        <!-- right aligned link -->
-        <div style="margin-left:auto; display:flex; align-items:center; gap:10px;">
-          <a class="btn" href="dashboard.html">Go to dashboard</a>
-        </div>
-      </div>
-
-      <div class="content">
-        <!-- Panels -->
-        <section id="panel-home" class="panel" role="tabpanel" aria-labelledby="tab-home" aria-hidden="false">
-          <h2>Welcome to BuildForce</h2>
-          <p class="muted">This is an example static page with tabbed sections. Use arrow keys to move tabs, Home/End to jump, or click.</p>
-
-          <p>Quick starter steps:</p>
-          <ol>
-            <li>Deploy these files to GitHub Pages / Netlify / Vercel.</li>
-            <li>Point your GoDaddy domain to the host (CNAME/A records).</li>
-          </ol>
-          <pre>// Example: deploy by pushing to GitHub, enable Pages, then add domain CNAME</pre>
-        </section>
-
-        <section id="panel-features" class="panel" role="tabpanel" aria-labelledby="tab-features" aria-hidden="true">
-          <h2>Features</h2>
-          <ul>
-            <li>Simple tab navigation</li>
-            <li>Accessible (ARIA + keyboard)</li>
-            <li>Responsive and lightweight</li>
-          </ul>
-        </section>
-
-        <section id="panel-pricing" class="panel" role="tabpanel" aria-labelledby="tab-pricing" aria-hidden="true">
-          <h2>Pricing (example)</h2>
-          <p class="muted">Simple tiers for the demo</p>
-          <ul>
-            <li>Free — Static site hosting</li>
-            <li>Pro — Custom domain, CDN</li>
-            <li>Enterprise — Full hosting + APIs</li>
-          </ul>
-        </section>
-
-        <section id="panel-contact" class="panel" role="tabpanel" aria-labelledby="tab-contact" aria-hidden="true">
-          <h2>Contact</h2>
-          <p class="muted">reach out at <strong>hello@buildforce.in</strong></p>
-          <p><a href="mailto:hello@buildforce.in">Email us</a></p>
-        </section>
-      </div>
-    </main>
+<header class="header">
+  <div class="container nav">
+    <div class="brand">BuildForce</div>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="contractors.html">For Contractors</a>
+      <a href="companies.html">For Companies</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html"><button class="cta">Contact</button></a>
+    </nav>
   </div>
+</header>
 
-  <script>
-    // Tab behavior (keyboard accessible)
-    (function(){
-      const tabList = document.querySelector('[role="tablist"]');
-      const tabs = Array.from(tabList.querySelectorAll('[role="tab"]'));
-      const panels = tabs.map(t => document.getElementById(t.getAttribute('aria-controls')));
+<main class="container">
 
-      function activateTab(newTab, setFocus = true){
-        tabs.forEach(t => {
-          const selected = t === newTab;
-          t.setAttribute('aria-selected', selected ? 'true' : 'false');
-          t.tabIndex = selected ? 0 : -1;
-          const panel = document.getElementById(t.getAttribute('aria-controls'));
-          panel.setAttribute('aria-hidden', selected ? 'false' : 'true');
-        });
-        if(setFocus) newTab.focus();
-      }
+<section class="hero">
+  <div>
+    <h1>Empowering Teams. Simplifying Work.</h1>
+    <p class="muted">BuildForce is a workforce management platform built for contractors and businesses — attendance, payroll automation, compliance and realtime site visibility.</p>
+    <div style="margin-top:18px">
+      <a href="contact.html"><button class="cta">Request Demo</button></a>
+      <a href="pricing.html" style="margin-left:10px">See pricing →</a>
+    </div>
 
-      // click
-      tabs.forEach(tab=>{
-        tab.addEventListener('click', ()=> activateTab(tab, false));
-      });
+    <div class="features section" style="margin-top:26px">
+      <div class="card">
+        <h4>Real-time Attendance</h4>
+        <p class="muted">GPS-verified mobile check-ins and location-aware attendance for on-field teams.</p>
+      </div>
+      <div class="card">
+        <h4>Payroll Automation</h4>
+        <p class="muted">Auto-calculate wages, overtime and schedule disbursals to reduce manual errors.</p>
+      </div>
+      <div class="card">
+        <h4>Compliance & Contracts</h4>
+        <p class="muted">Digital contracts, KYC & document storage to keep your business audit-ready.</p>
+      </div>
+      <div class="card">
+        <h4>Reports & Analytics</h4>
+        <p class="muted">Dashboards that show productivity, cost per project and attendance trends.</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h3>Why BuildForce?</h3>
+    <ul>
+      <li>Reduce payroll processing time by automating calculations</li>
+      <li>Improve field accountability with live attendance maps</li>
+      <li>Keep contractors engaged with transparent payments</li>
+    </ul>
+    <div style="margin-top:12px"><a href="contact.html"><button class="cta">Talk to sales</button></a></div>
+  </div>
+</section>
 
-      // keyboard navigation
-      tabList.addEventListener('keydown', (e)=>{
-        const currentIndex = tabs.indexOf(document.activeElement);
-        let nextIndex = -1;
-        if(e.key === 'ArrowRight' || e.key === 'ArrowDown'){
-          nextIndex = (currentIndex + 1) % tabs.length;
-          e.preventDefault();
-        } else if(e.key === 'ArrowLeft' || e.key === 'ArrowUp'){
-          nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
-          e.preventDefault();
-        } else if(e.key === 'Home'){
-          nextIndex = 0; e.preventDefault();
-        } else if(e.key === 'End'){
-          nextIndex = tabs.length - 1; e.preventDefault();
-        } else if(e.key === 'Enter' || e.key === ' '){
-          // space/enter activates (handled by click normally)
-        }
+</main>
 
-        if(nextIndex >= 0){
-          activateTab(tabs[nextIndex]);
-        }
-      });
-
-      // preserve initial active state (first tab is active by default)
-      activateTab(tabs[0], false);
-    })();
-  </script>
+<footer class="footer">
+  <div class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>© 2025 BuildForce — Empowering field workforce & contractors</div>
+      <div style="opacity:0.9">support@buildforce.club • Hyderabad, India</div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
