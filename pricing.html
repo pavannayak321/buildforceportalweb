@@ -1,78 +1,120 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Pricing - BuildForce</title>
-<link rel="stylesheet" href="assets/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BuildForce — Pricing & Policy</title>
+  <meta name="description" content="Pricing policy for BuildForce — charges for Wageman and Contractors, payment gateway fees, contact info." />
+  <style>
+    :root{
+      --accent:#0ea5a4;
+      --muted:#6b7280;
+      --bg:#f8fafc;
+      --card:#ffffff;
+      --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#0f172a;line-height:1.5}
+    .container{max-width:980px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#0284c7);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    h1{font-size:1.5rem;margin:0}
+    p.lead{color:var(--muted);margin-top:6px}
+    .grid{display:grid;gap:18px;margin-top:22px}
+    .card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 8px 24px rgba(2,6,23,0.06)}
+    .card h2{margin:0 0 8px 0}
+    .muted{color:var(--muted);font-size:0.95rem}
+    .pricing-list{display:flex;flex-direction:column;gap:12px}
+    .price-row{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;border:1px solid #eef2f6}
+    .note{font-size:0.92rem;color:var(--muted)}
+    footer{margin-top:20px;color:var(--muted);font-size:0.9rem}
+    .contact{margin-top:12px}
+    a.contact-link{color:var(--accent);text-decoration:none}
+    @media(min-width:720px){
+      .pricing-list{flex-direction:row}
+    }
+  </style>
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <div class="brand">BuildForce</div>
-    <nav class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contractors.html">For Contractors</a>
-      <a href="companies.html">For Companies</a>
-      <!-- <a href="pricing.html">Pricing</a> -->
-      <a href="about.html">About</a>
-      <a href="contact.html"><button class="cta">Contact</button></a>
-    </nav>
-  </div>
-</header>
-
-<main class="container">
-
-<section class="section">
-  <h2>Pricing</h2>
-  <p class="muted">Transparent plans to suit teams of all sizes.</p>
-
-  <div class="pricing-grid" style="margin-top:18px">
-    <div class="card">
-      <h3>Starter</h3>
-      <p><strong>₹999 / month</strong></p>
-      <ul>
-        <li>Up to 10 users</li>
-        <li>Attendance & basic reports</li>
-        <li>Email support</li>
-      </ul>
-      <div style="margin-top:8px"><button class="cta">Get Started</button></div>
-    </div>
-
-    <div class="card">
-      <h3>Growth</h3>
-      <p><strong>₹2,499 / month</strong></p>
-      <ul>
-        <li>Up to 50 users</li>
-        <li>Payroll automation</li>
-        <li>Shift scheduling</li>
-      </ul>
-      <div style="margin-top:8px"><button class="cta">Start Trial</button></div>
-    </div>
-
-    <div class="card">
-      <h3>Enterprise</h3>
-      <p><strong>Custom pricing</strong></p>
-      <ul>
-        <li>Unlimited users</li>
-        <li>Priority support & onboarding</li>
-        <li>Custom integrations</li>
-      </ul>
-      <div style="margin-top:8px"><a href="contact.html"><button class="cta">Contact Sales</button></a></div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
   <div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>© 2025 BuildForce — Empowering field workforce & contractors</div>
-      <div style="opacity:0.9">support@buildforce.club • Hyderabad, India</div>
-    </div>
+    <header>
+      <div class="logo">BF</div>
+      <div>
+        <h1>BuildForce — Pricing & Policy</h1>
+        <p class="lead">Transparent pricing for Wageman and Contractors. We prioritize security, auditability and fair charges.</p>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2>Overview</h2>
+        <p class="muted">BuildForce builds and maintains an application focused on providing a secure, auditable environment for Wageman and Contractors. We log activities to ensure transparency and timely payments. Below are the pricing details and related policies.</p>
+      </section>
+
+      <section class="card">
+        <h2>Wageman Pricing</h2>
+        <div class="pricing-list">
+          <div class="price-row" aria-hidden="true">
+            <div>
+              <strong>Daily registration / usage charge</strong>
+              <div class="note">Charged per order per day when a Wageman is registered for an order.</div>
+            </div>
+            <div><strong>₹2 / order</strong></div>
+          </div>
+
+          <div class="price-row" aria-hidden="true">
+            <div>
+              <strong>Payment gateway fee</strong>
+              <div class="note">A percentage of the transaction amount is charged to cover payment gateway costs.</div>
+            </div>
+            <div><strong>2% of transaction amount</strong></div>
+          </div>
+        </div>
+
+        <p class="note" style="margin-top:12px">The daily ₹2 charge covers infrastructure and service maintenance. The 2% payment gateway fee is collected to cover third-party payment processing costs and will be indicated on transaction receipts.</p>
+      </section>
+
+      <section class="card">
+        <h2>Contractor Pricing</h2>
+        <p class="muted">Contractors do not incur a registration fee.</p>
+
+        <div class="price-row" style="margin-top:12px">
+          <div>
+            <strong>Transaction fee (deducted from contractor wallet)</strong>
+            <div class="note">This fee is used to process payments and credit the Wageman's bank account.</div>
+          </div>
+          <div><strong>2% of transaction amount</strong></div>
+        </div>
+
+        <p class="note" style="margin-top:12px">No additional fees will be charged to Contractors or Wagemen beyond those described here, unless explicitly agreed in writing.</p>
+      </section>
+
+      <section class="card">
+        <h2>Insurance & Additional Services</h2>
+        <p class="muted">We are actively working to integrate health insurance offerings for Wagemen. These offerings are not finalized.</p>
+        <p class="note">If and when insurance or other optional services are available, they will be rolled out through the app subject to mutual agreement between Wagemen and Contractors. Details including pricing, eligibility and opt-in procedures will be published when finalized.</p>
+      </section>
+
+      <section class="card">
+        <h2>Contact & Support</h2>
+        <p class="muted">If you have questions about billing, disputes, or special requests, please contact our team.</p>
+        <div class="contact">
+          <div>Phone: <a class="contact-link" href="tel:+919618872992">+91 96188 72992</a></div>
+          <div>Email: <a class="contact-link" href="mailto:admin@buildforce.club">admin@buildforce.club</a></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Terms & Final Notes</h2>
+        <p class="note">By using BuildForce services, Wagemen and Contractors agree to this pricing policy. BuildForce reserves the right to update pricing and fees; however, we will notify registered users of any material changes in advance through the app or via the contact details on file.</p>
+        <p class="note" style="margin-top:8px">Effective date: <strong>October 11, 2025</strong></p>
+      </section>
+    </main>
+
+    <footer style="text-align:center;margin-top:28px">
+      <div class="muted">© BuildForce. All rights reserved.</div>
+    </footer>
   </div>
-</footer>
 </body>
 </html>
